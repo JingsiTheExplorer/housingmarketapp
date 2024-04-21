@@ -14,7 +14,6 @@ from shapely.geometry import Point
 import json
 
 
-import matplotlib.pyplot as plt
 from keras.models import load_model
 from keras.layers import Dense
 import tensorflow as tf
@@ -250,14 +249,14 @@ def main():
     # st.markdown("All the information provided below are within the time range selected here:")
 
     #Load Data
-    df_HomeValue = pd.read_csv('data/home_value/US_State_City_Sum.csv')   
+    df_HomeValue = pd.read_csv('data/models/US_State_City_Sum.csv')   
   
 
     cities_geoPandas = get_cities_data(df_HomeValue)
     # states_geoJson = get_states_geoJson()
 
     # Specify the file path
-    file_path = 'data/StateGeoJason/output.geojson'
+    file_path = 'data/models/output.geojson'
 
     # Write the GeoJSON data to a file
     with open(file_path, 'r') as file:
