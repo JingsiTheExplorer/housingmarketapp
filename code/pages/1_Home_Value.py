@@ -263,10 +263,10 @@ def main():
     st.markdown("All the information provided below are within the time range selected here:")
 
     #Load Data
-    mortgage_rate = pd.read_csv('data/home_value/MORTGAGE30US.csv')
-    df_HomeValue_cities = pd.read_csv('data/home_value/yw1_states_data.csv')
-    df_HomeValue_states = pd.read_csv('data/home_value/yw1_us_state_data.csv')
-    df_HomeValue_US = pd.read_csv('data/home_value/yw1_us_data.csv')
+    mortgage_rate = pd.read_csv('../data/home_value/MORTGAGE30US.csv')
+    df_HomeValue_cities = pd.read_csv('../data/home_value/yw1_states_data.csv')
+    df_HomeValue_states = pd.read_csv('../data/home_value/yw1_us_state_data.csv')
+    df_HomeValue_US = pd.read_csv('../data/home_value/yw1_us_data.csv')
 
     df_HomeValue_cities.columns = [convert_date_format(col) for col in df_HomeValue_cities.columns]
     df_HomeValue_states.columns = [convert_date_format(col) for col in df_HomeValue_states.columns]
